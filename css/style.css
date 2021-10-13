@@ -176,12 +176,11 @@ blockquote {
 .header-logo {
     display: block;
     width: 100%;
-    left: 50%;
     top: 75px;
     text-align: center;
     position: absolute;
     z-index: 2;
-    animation: anim-bob 3s ease-in-out infinite;
+    /* animation: anim-bob 3s ease-in-out infinite; */
 }
 
 @keyframes anim-bob {
