@@ -183,6 +183,10 @@ blockquote {
     /* animation: anim-bob 3s ease-in-out infinite; */
 }
 
+.header-logo img {
+    width: 100%;
+}
+
 @keyframes anim-bob {
     0% {
         transform: translate(-50%, 0);
@@ -1328,7 +1332,7 @@ footer {
     }
 
     .section-unit {
-        padding: 0 0.5rem 80px;
+        padding: 40px 0.5rem;
     }
 
     .card img,
