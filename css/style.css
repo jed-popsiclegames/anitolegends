@@ -146,6 +146,11 @@ small {
     text-transform: uppercase;
 }
 
+small em {
+    color: var(--lighter-gray);
+    text-transform: none;
+}
+
 blockquote {
     font-style: italic;
     font-size: 0.85rem;
@@ -1221,8 +1226,21 @@ footer {
 .team-member-info {
     background-color: var(--medium-violet);
     padding: 1rem 1rem 0;
+    position: relative;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
+}
+
+.team-member-info[onclick] {
+    cursor: pointer;
+}
+
+.team-member-plus {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    color: var(--medium-violet);
 }
 
 .team-advisors .team-member-info {
@@ -1257,6 +1275,81 @@ footer {
 .team-member h5 {
     color: var(--off-white);
     margin: 0;
+}
+
+/************/
+/* OVERLAYS */
+/************/
+
+.overlay {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 9000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 500ms;
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.overlay-content {
+    min-width: 400px;
+    max-width: 960px;
+    padding: 2rem;
+    background-color: var(--off-white);
+    border-radius: 12px;
+    display: none;
+    position: relative;
+}
+
+.overlay-content.active {
+    display: flex;
+}
+
+.overlay-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    color: var(--medium-violet);
+    font-size: 24px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.overlay-content-face {
+    text-align: center;
+    margin-right: 2rem;
+}
+
+.overlay-content-face img {
+    width: 150px;
+    border: 2px solid var(--berry);
+}
+.overlay-content-details h3 {
+    margin-bottom: 0;
+}
+
+.overlay-content-details h5 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.overlay-content-details li {
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 /**********/
@@ -1328,7 +1421,7 @@ footer {
 
 .nav-menu-slide {
     position: fixed;
-    z-index: 9999;
+    z-index: 8000;
     top: 0;
     right: -100%;
     width: 30%;
@@ -1518,6 +1611,20 @@ footer {
     .team-member {
         width: calc((100% - 3rem) / 2);
         max-width: 350px;
+    }
+
+    .overlay-content {
+        flex-direction: column;
+    }
+
+    .overlay-content-face {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .overlay-content-details h3,
+    .overlay-content-details h5 {
+        text-align: center;
     }
 
     .footer-container {
