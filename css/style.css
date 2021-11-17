@@ -48,6 +48,7 @@
 
 html {
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -317,6 +318,27 @@ main {
     padding: 0 1rem;
 }
 
+.features {
+    flex-wrap: wrap;
+}
+
+.feature-text {
+    width: calc((100% - 1rem) / 2);
+    padding: 2rem;
+}
+
+.feature-text img {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.feature-text ul li {
+    list-style-position: outside;
+    text-align: left;
+    margin-left: 1rem;
+    line-height: 1.5rem;
+}
+
 .section-items.columns {
     justify-content: space-around;
 }
@@ -525,6 +547,8 @@ main {
     padding: 0 1rem 2rem;
     border-bottom-left-radius: 3rem;
     border-bottom-right-radius: 3rem;
+    position: relative;
+    bottom: 1px;
 }
 
 .card-content h2 {
@@ -1191,7 +1215,7 @@ footer {
     display: flex;
     flex-direction: column;
     margin: 0.5rem;
-    max-width: 200px;
+    max-width: 250px;
 }
 
 .team-member-info {
@@ -1203,7 +1227,10 @@ footer {
 
 .team-advisors .team-member-info {
     background-color: var(--berry);
-    border-radius: 0.5rem;
+}
+
+.team-advisors .team-member-position {
+    background-color: var(--dark-violet);
 }
 
 .team-member img {
@@ -1475,8 +1502,22 @@ footer {
         margin-right: 0;
     }
 
+    .feature-text {
+        width: 100%;
+        padding: 2rem 0;
+    }
+
     .nav-menu-slide {
         width: 50%;
+    }
+
+    #team .section-items {
+        align-items: center;
+    }
+
+    .team-member {
+        width: calc((100% - 3rem) / 2);
+        max-width: 350px;
     }
 
     .footer-container {
@@ -1498,19 +1539,6 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
-    #team .section-items {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .team-member {
-        width: 100%;
-        max-width: 350px;
-        margin: 0.5rem 0;
-    }
-}
-
-@media screen and (max-width: 450px) {
     html {
         font-size: 14px;
     }
