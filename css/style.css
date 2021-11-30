@@ -1298,6 +1298,13 @@ footer {
     max-height: 100px;
     max-width: 250px;
     object-fit: contain;
+    will-change: contents;
+    transition-property: transform;
+    transition-duration: 300ms;
+}
+
+.partner-grid-cell img:hover {
+    transform: scale(1.1);
 }
 
 /************/
