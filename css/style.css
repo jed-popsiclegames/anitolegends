@@ -535,6 +535,14 @@ main {
     flex-wrap: wrap;
 }
 
+.section-video {
+    padding-top: 4rem;
+}
+
+.section-video iframe {
+    max-width: 100%;
+}
+
 .card {
     margin-right: 1rem;
     width: calc((100% - 3rem) / 4);
@@ -1298,20 +1306,20 @@ footer {
 
 .partner-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
 }
 
 .partner-grid-cell {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1rem;
 }
 
 .partner-grid-cell img {
     width: 80%;
-    max-height: 100px;
-    max-width: 260px;
+    max-height: 120px;
+    max-width: 230px;
     object-fit: contain;
     will-change: contents;
     transition-property: transform;
@@ -1701,6 +1709,7 @@ footer {
 
     .partner-grid {
         grid-template-columns: 1fr;
+        gap: 0;
     }
 
     .partner-grid-cell {
