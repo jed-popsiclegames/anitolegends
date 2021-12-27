@@ -1369,6 +1369,7 @@ footer {
 .partner-grid-cell img {
     width: 80%;
     max-height: 120px;
+    min-width: 160px;
     max-width: 230px;
     object-fit: contain;
     will-change: contents;
