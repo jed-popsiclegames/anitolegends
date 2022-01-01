@@ -1610,6 +1610,11 @@ footer {
     transform: scale(1.25);
 }
 
+.footer-copyright {
+    padding: 2rem 0 1rem;
+    justify-content: center;
+}
+
 /******************/
 /* SLIDE OUT MENU */
 /******************/
@@ -1885,6 +1890,10 @@ footer {
 
     .nav-menu-slide {
         width: 75%;
+    }
+
+    .footer-copyright {
+        padding-bottom: 10rem;
     }
 
     .downloads-mobile {
