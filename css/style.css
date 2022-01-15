@@ -587,6 +587,8 @@ main {
 
 .section-video {
     padding-top: 4rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .section-video iframe {
@@ -1690,6 +1692,14 @@ footer {
     .header-video {
         margin-left: 2rem;
         margin-right: 2rem;
+    }
+
+    .section-video {
+        flex-direction: column;
+    }
+
+    .section-video-container:not(:last-of-type) {
+        margin-bottom: 4rem;
     }
 
     main,
