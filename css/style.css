@@ -117,6 +117,10 @@ p {
     margin-bottom: 1rem;
 }
 
+p.center {
+    text-align: center;
+}
+
 p+h3 {
     margin-top: 1rem;
 }
@@ -1534,6 +1538,35 @@ footer {
     display: flex;
     flex-direction: column;
     margin: 1rem;
+}
+
+/*******************/
+/* GENERIC CONTENT */
+/*******************/
+
+.generic-content-area {
+    margin: 0 auto 4rem;
+}
+
+.generic-content-area p {
+    
+}
+
+.generic-content-area.narrow {
+    max-width: 800px;
+}
+
+i.large {
+    font-size: 1.5rem;
+}
+
+.beta-logo {
+    max-width: 300px;
+    margin-bottom: 1rem;
+}
+
+.beta-banner {
+    width: 100%;
 }
 
 /***************/
