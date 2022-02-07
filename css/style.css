@@ -1564,15 +1564,22 @@ i.large {
 }
 
 .btn-beta-play {
-    width: 400px;
-    height: 128px;
-    border: none;
-    background-color: transparent;
-    background-image: url(../images/btn-play.png);
-    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    max-width: 400px;
+    width: 100%;
 }
 
-.btn-beta-play:hover {
+.btn-beta-play img {
+    width: 100%;
+}
+
+.btn-beta-play img:hover,
+.btn-beta-play img:active {
+    filter: brightness(0.9);
+}
+
+.btn-beta-play button:hover {
     background-image: url(../images/btn-play-hover.png);
 }
 
@@ -1739,10 +1746,6 @@ footer {
 /*****************/
 
 @media screen and (max-width: 1250px) {
-    .main-header {
-        padding-top: 69px;
-    }
-
     .header-video {
         margin-left: 2rem;
         margin-right: 2rem;
@@ -1781,6 +1784,10 @@ footer {
 }
 
 @media screen and (max-width: 1020px) {
+    .main-header {
+        padding-top: 69px;
+    }
+
     .outer {
         padding-top: 8rem;
     }
