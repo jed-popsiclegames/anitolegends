@@ -1548,8 +1548,11 @@ footer {
     margin: 0 auto 4rem;
 }
 
-.generic-content-area p {
-    
+.generic-content-area.boxed {
+    border: 1px solid var(--orange);
+    border-radius: 2rem;
+    padding: 2rem;
+    box-sizing: content-box;
 }
 
 .generic-content-area.narrow {
@@ -1560,12 +1563,29 @@ i.large {
     font-size: 1.5rem;
 }
 
+.btn-beta-play {
+    width: 400px;
+    height: 128px;
+    border: none;
+    background-color: transparent;
+    background-image: url(../images/btn-play.png);
+    cursor: pointer;
+}
+
+.btn-beta-play:hover {
+    background-image: url(../images/btn-play-hover.png);
+}
+
 .beta-logo {
     max-width: 300px;
     margin-bottom: 1rem;
 }
 
 .beta-banner {
+    width: 100%;
+}
+
+.signup-form {
     width: 100%;
 }
 
