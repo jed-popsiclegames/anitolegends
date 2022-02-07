@@ -303,12 +303,12 @@ blockquote {
 
 .main-nav li.highlight a,
 .nav-menu-list li.highlight a {
-    background-color: #5865F2;
+    background-color: var(--berry);
     color: white;
 }
 
 .main-nav li a:hover {
-    background-color: var(--berry);
+    background-color: var(--medium-violet);
     color: white;
 }
 
