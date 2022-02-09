@@ -1378,10 +1378,6 @@ footer {
     width: 30%;
 }
 
-.partner-grid-cell:last-of-type {
-    margin-bottom: 0;
-}
-
 .partner-grid-cell img {
     width: 80%;
     max-height: 120px;
