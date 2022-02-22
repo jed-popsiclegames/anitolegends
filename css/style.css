@@ -1774,6 +1774,10 @@ footer {
         max-width: 650px;
     }
 
+    .team-advisors .partner-grid-cell {
+        margin: 2rem 0;
+    }
+
     .downloads-mobile {
         max-width: 768px;
     }
