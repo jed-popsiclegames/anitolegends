@@ -1634,6 +1634,7 @@ footer {
     color: white;
     text-decoration: none;
     font-weight: 700;
+    margin: 0.5rem;
 }
 
 .inline-button:hover {
@@ -1643,6 +1644,11 @@ footer {
 
 .generic-content-area {
     margin: 0 auto 4rem;
+}
+
+.generic-content-area.flex {
+    display: flex;
+    justify-content: center;
 }
 
 .generic-content-area.boxed {
@@ -2075,6 +2081,11 @@ footer {
 
     .nav-menu-slide {
         width: 75%;
+    }
+
+    .generic-content-area.flex {
+        flex-direction: column;
+        font-size: 18px;
     }
 
     .footer-copyright {
