@@ -371,7 +371,8 @@
                     </div>
                 </div>
                 <div class="team-member">
-                    <div class="team-member-info">
+                    <div class="team-member-info" onclick="ShowPopup('team-mae')">
+                        <i class="team-member-plus lni lni-circle-plus"></i>
                         <img src="images/team/mae.jpg">
                         <h3>Mae <br>Ca&Ntilde;a</h3>
                     </div>
@@ -380,7 +381,18 @@
                     </div>
                 </div>
                 <div class="team-member">
-                    <div class="team-member-info">
+                    <div class="team-member-info" onclick="ShowPopup('team-sam')">
+                        <i class="team-member-plus lni lni-circle-plus"></i>
+                        <img src="images/team/sam.jpg">
+                        <h3>Sam <br>Khalil</h3>
+                    </div>
+                    <div class="team-member-position">
+                        <h5>Game Developer</h5>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="team-member-info" onclick="ShowPopup('team-luie')">
+                        <i class="team-member-plus lni lni-circle-plus"></i>
                         <img src="images/team/luie.jpg">
                         <h3>Luie <br>Magbanua</h3>
                     </div>
@@ -752,6 +764,48 @@
                 <ul>
                     <li>8+ years of game development experience</li>
                 </ul>
+            </div>
+        </div>
+        <div class="overlay-content" id="team-mae">
+            <button type="button" class="overlay-close" onclick="HidePopup(this)"><i class="lni lni-close"></i></button>
+            <div class="overlay-content-face">
+                <img src="images/team/mae.jpg">
+            </div>
+            <div class="overlay-content-details">
+                <h3>Mae Ca&Ntilde;a</h3>
+                <h5>Web and Blockchain Developer</h5>
+                <div class="overlay-content-social">
+                    <a href="https://twitter.com/MaecanaOfficial" target="_blank"><i class="lni lni-twitter-filled"></i></a>
+                    <a href="https://www.linkedin.com/in/mae-cana/" target="_blank"><i class="lni lni-linkedin-original"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="overlay-content" id="team-sam">
+            <button type="button" class="overlay-close" onclick="HidePopup(this)"><i class="lni lni-close"></i></button>
+            <div class="overlay-content-face">
+                <img src="images/team/sam.jpg">
+            </div>
+            <div class="overlay-content-details">
+                <h3>Sam <br>Khalil</h3>
+                <h5>Game Developer</h5>
+                <div class="overlay-content-social">
+                    <a href="https://twitter.com/Sam_Khalil_" target="_blank"><i class="lni lni-twitter-filled"></i></a>
+                    <a href="https://www.linkedin.com/in/samir-khalil-504a42193/" target="_blank"><i class="lni lni-linkedin-original"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="overlay-content" id="team-luie">
+            <button type="button" class="overlay-close" onclick="HidePopup(this)"><i class="lni lni-close"></i></button>
+            <div class="overlay-content-face">
+                <img src="images/team/luie.jpg">
+            </div>
+            <div class="overlay-content-details">
+                <h3>Luie <br>Magbanua</h3>
+                <h5>Community and PR Head</h5>
+                <div class="overlay-content-social">
+                    <a href="https://twitter.com/anito_luie" target="_blank"><i class="lni lni-twitter-filled"></i></a>
+                    <a href="https://www.linkedin.com/in/luie-magbanua-3070a0b3/" target="_blank"><i class="lni lni-linkedin-original"></i></a>
+                </div>
             </div>
         </div>
         <div class="overlay-content" id="team-andy">
