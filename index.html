@@ -236,14 +236,9 @@
                     <div class="card-content">
                         <h2>Q2 2022</h2>
                         <ul>
-                            <li>Anito Legends Marketplace</li>
-                            <li>Web + Mobile versions</li>
-                            <li>Earn $GINTO tokens via PvE and PvP</li>
+                            <li>Web and Mobile versions</li>
                             <li>Anito Care</li>
                             <li>PvE</li>
-                            <li>PvP</li>
-                            <li>Leaderboards</li>
-                            <li>$LARO TGE</li>
                         </ul>
                     </div>
                 </div>
@@ -253,12 +248,10 @@
                     <div class="card-content">
                         <h2>Q3 2022</h2>
                         <ul>
-                            <li>New Anito Classes</li>
-                            <li>More PvE content</li>
-                            <li>Raid Battles</li>
-                            <li>Premium PvE content</li>
-                            <li>Betting System</li>
-                            <li>Minting NFT weaponsM</li>
+                            <li><span>July</span> PVP and beta tournament</li>
+                            <li><span>August</span> NFT Sale</li>
+                            <li>TGE</li>
+                            <li>Early Access Launch</li>
                         </ul>
                     </div>
                 </div>
@@ -268,9 +261,10 @@
                     <div class="card-content">
                         <h2>Q4 2022</h2>
                         <ul>
-                            <li>Tournaments</li>
-                            <li>More PvE content</li>
-                            <li>More content</li>
+                            <li>New Classes</li>
+                            <li>Additional PvP/PvE content</li>
+                            <li>NFT Weapons</li>
+                            <li>Betting System</li>
                         </ul>
                     </div>
                 </div>
@@ -887,6 +881,20 @@
                 </ul>
             </div>
         </div>
+        <div class="overlay-content-disclaimer" id="disclaimer">
+            <div class="overlay-content-disclaimer-inner" >
+                <div>
+                    <img src="images/tikbalang_present.png">
+                </div>
+                <div class="overlay-content-details">
+                    <h1>Disclaimer</h1>
+                    <p>Anito Legends is a video game that is releasing on iOS, Android, PC and Mac. Players need to purchase NFT assets to be able to play the game.</p>
+                    <p>The game also utilizes $GINTO and $LARO tokens that can be bought for in-app purchases such as player cosmetics, equipment, and more.</p>
+                    <p>Anito Legends is a game that utilizes some 'play and earn' mechanics. It is not an investment opportunity nor is it an invitation to invest.</p>
+                </div>
+            </div>
+            <button type="button" class="disclaimer-close" onclick="HidePopup(this)">I understand</button>
+        </div>
     </div>
     <!-- overlays end -->
 
@@ -908,6 +916,8 @@
             document.querySelector(".overlay").classList.remove("active");
             e.parentElement.classList.remove("active");
         }
+
+        ShowPopup("disclaimer");
     </script>
 </body>
 </html>
