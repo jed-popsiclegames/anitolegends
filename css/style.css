@@ -2171,6 +2171,10 @@ footer {
     max-width: 500px;
 }
 
+a.inline-button {
+    color: white;
+}
+
 .inline-button {
     border-radius: 2rem;
     background-color: var(--berry);
