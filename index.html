@@ -24,7 +24,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css?version=0.3.4">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+
+    <link rel="stylesheet" href="css/style.css?version=0.3.5">
 </head>
 <body>
     <div class="discord-button">
@@ -85,121 +88,293 @@
     </nav>
     
     <header class="main-header">
-        <div class="header-img"></div>
+        <!-- <div class="header-img"></div> -->
         <div class="header-logo">
             <img src="images/logo-1.png">
         </div>
         <div class="header-video">
             <video autoplay muted loop>
-                <source src="video/pve_combat.webm">
-                <source src="video/pve_combat.mp4">
+                <source src="video/pve_combat_2.webm">
+                <!-- <source src="video/pve_combat.mp4"> -->
             </video>
         </div>
     </header>
     
     <main>
+
+        <!-- gacha start -->
+        <div class="section-unit" id="gacha">
+            <div class="container">
+                <h1>Assemble your Anitos for Battle!</h1>
+                <div class="gacha-list">
+                    <div class="gacha-banner" id="gacha-common">
+                        <a href="https://marketplace.anitolegends.com"></a>
+                        <img class="gacha-banner-box" src="images/box_common.png">
+                        <div class="gacha-banner-title">
+                            <h4>Blind box</h4>
+                            <h1>Common</h1>
+                        </div>
+                        <div class="gacha-heading">
+                            <video autoplay muted loop>
+                                <source src="video/banner_common_1.webm">
+                            </video>
+                            <div class="gacha-banner-content">
+                                <ul>
+                                    <li>Contains a unique Common Anito</li>
+                                    <li>30 days to unlock a <a class="gacha-banner-link" href="#charms">Charm slot</a></li>
+                                </ul>
+                                <button class="button gacha-purchase-button">Purchase</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gacha-banner" id="gacha-epic">
+                        <a href="https://marketplace.anitolegends.com"></a>
+                        <img class="gacha-banner-box" src="images/box_epic.png">
+                        <div class="gacha-banner-title">
+                            <h4>Blind box</h4>
+                            <h1>Epic</h1>
+                        </div>
+                        <div class="gacha-heading">
+                            <video autoplay muted loop>
+                                <source src="video/banner_epic_1.webm">
+                            </video>
+                            <div class="gacha-banner-content">
+                                <ul>
+                                    <li>Contains a unique Epic Anito</li>
+                                    <li>20 days to unlock a <a class="gacha-banner-link" href="#charms">Charm slot</a></li>
+                                </ul>
+                                <button class="button gacha-purchase-button">Purchase</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gacha-banner" id="gacha-legendary">
+                        <a href="https://marketplace.anitolegends.com"></a>
+                        <img class="gacha-banner-box" src="images/box_legendary.png">
+                        <div class="gacha-banner-title">
+                            <h4>Blind box</h4>
+                            <h1>Legendary</h1>
+                        </div>
+                        <div class="gacha-heading">
+                            <video autoplay muted loop>
+                                <source src="video/banner_legendary_1.webm">
+                            </video>
+                            <div class="gacha-banner-content">
+                                <ul>
+                                    <li>Contains a unique Legendary Anito</li>
+                                    <li>10 days to unlock a <a class="gacha-banner-link" href="#charms">Charm slot</a></li>
+                                    <li>Can summon Legendary Anitos</li>
+                                </ul>
+                                <button class="button gacha-purchase-button">Purchase</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://play.anitolegends.com" class="big-download">
+                    <span>Download the game client</span>
+                </a>
+            </div>
+        </div>
+
         <!-- about start -->
         <div class="section-unit" id="about">
-            <h1>Welcome to Anito Legends!</h1>
-            <div class="generic-content-area">
-                <p class="center"><a class="btn-beta-play" href="https://play.anitolegends.com/"><img src="images/btn-play.png"></a></p>
-            </div>
-            <div class="section-cards">
-                <div class="card card-1">
-                    <img src="images/card-pose-4.png">
-                    <div class="card-background"></div>
-                    <div class="card-content">
-                        <h2>Assemble!</h2>
-                        <p>Build a team of Anitos and customize their equipment for any kind of situation.</p>
+            <div class="container">
+                <h1>Welcome to Anito Legends!</h1>
+                <div class="section-cards">
+                    <div class="card card-1">
+                        <img src="images/card-pose-4.png">
+                        <div class="card-background"></div>
+                        <div class="card-content">
+                            <h2>Assemble!</h2>
+                            <p>Build a team of Anitos and customize their equipment for any kind of situation.</p>
+                        </div>
+                    </div>
+                    <div class="card card-2">
+                        <img src="images/card-pose-2.png">
+                        <div class="card-background"></div>
+                        <div class="card-content">
+                            <h2>Nurture!</h2>
+                            <p>Feed and train your collection of Anitos to improve their fighting capabilities.</p>
+                        </div>
+                    </div>
+                    <div class="card card-3">
+                        <img src="images/card-pose-3.png">
+                        <div class="card-background"></div>
+                        <div class="card-content">
+                            <h2>Battle!</h2>
+                            <p>Test the might of your team in head-to-head combat with other players.</p>
+                        </div>
+                    </div>
+                    <div class="card card-4">
+                        <img src="images/card-pose-5.png">
+                        <div class="card-background"></div>
+                        <div class="card-content">
+                            <h2>Earn!</h2>
+                            <p>Build your Anitos into Legends and win PvP battles to earn $GINTO tokens.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="card card-2">
-                    <img src="images/card-pose-2.png">
-                    <div class="card-background"></div>
-                    <div class="card-content">
-                        <h2>Nurture!</h2>
-                        <p>Feed and train your collection of Anitos to improve their fighting capabilities.</p>
+                <div class="generic-content-area play-now">
+                    <p class="center"><a class="btn-beta-play" href="https://play.anitolegends.com/"><img src="images/btn-play.png"></a></p>
+                </div>
+                <div class="section-video">
+                    <div class="section-video-container">
+                        <h3>Watch the combat trailer</h3>
+                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mDhT9AtXgMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                </div>
-                <div class="card card-3">
-                    <img src="images/card-pose-3.png">
-                    <div class="card-background"></div>
-                    <div class="card-content">
-                        <h2>Battle!</h2>
-                        <p>Test the might of your team in head-to-head combat with other players.</p>
+                    <div class="section-video-container">
+                        <h3>Watch the Anito variety trailer</h3>
+                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/BCk4ioAdb-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                </div>
-                <div class="card card-4">
-                    <img src="images/card-pose-5.png">
-                    <div class="card-background"></div>
-                    <div class="card-content">
-                        <h2>Earn!</h2>
-                        <p>Build your Anitos into Legends and win PvP battles to earn $GINTO tokens.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="section-video">
-                <div class="section-video-container">
-                    <h3>Watch the combat trailer</h3>
-                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mDhT9AtXgMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="section-video-container">
-                    <h3>Watch the Anito variety trailer</h3>
-                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/BCk4ioAdb-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
-        <div class="section-unit">
-            <div class="section-items about">
-                <div class="section-text">
-                    <h3>Battle your way to victory!</h3>
-                    <p>Anito Legends is a multi-platform strategic auto-battler wherein you are tasked to assemble a team of Anitos, customize their equipment and go on an adventure or battle with other players.</p>
-                    <h3>Play and earn</h3>
-                    <p>In Anito Legends, you can play to earn tokens. Anito tokens can be used to purchase items from the Anito Legends Marketplace.</p>
+
+        <!-- anitos start -->
+        <div class="section-unit" id="anitos">
+            <div class="container">
+                <h1>Poised to Fight</h1>
+                <div class="section-subunit">
+                    <h3>The Genesis Glow</h3>
+                    <div class="anitos-genesis">
+                        <div class="anitos-genesis-content">
+                            <p>These unique Anitos are visually distinguishable from their descendants as they possess an emanating glow of the power within when they engage in battle.</p>
+                            <p>The "Genesis Glow" is a unique trait that will only be present in "The First Ones" or the first 10,000 unique Anito NFTs.</p>
+                            <div class="fill v-center">
+                                <a href="https://marketplace.anitolegends.com" class="inline-button device-download">
+                                    <span>Visit the Marketplace</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="anitos-genesis-image">
+                            <img src="images/anito_genesis.gif">
+                        </div>
+                    </div>
                 </div>
-                <div class="section-image">
-                    <img class="about-img" src="images/card-pose-1.png">
+                <div class="section-subunit">
+                    <h3>The Anito Classes</h3>
+                    <div class="anitos-classes">
+                        <div class="anitos-classes-entry class-kiwig">
+                            <video autoplay muted loop>
+                                <source src="video/kiwig.webm">
+                            </video>
+                            <h4>Kiwig</h4>
+                            <p>Stuck in one form, the Kiwig have learned to rely on their wiles and charm to survive.</p>
+                        </div>
+                        <div class="anitos-classes-entry class-sarangay">
+                            <video autoplay muted loop>
+                                <source src="video/sarangay.webm">
+                            </video>
+                            <h4>Sarangay</h4>
+                            <p>The Sarangay are warm-hearted and hospitable, though they tend to be short-tempered. </p>
+                        </div>
+                        <div class="anitos-classes-entry class-siyokoy">
+                            <video autoplay muted loop>
+                                <source src="video/siyokoy.webm">
+                            </video>
+                            <h4>Siyokoy</h4>
+                            <p>The Siyokoy make up for their weakness on land with agility, delivering swift, often fatal blows. </p>
+                        </div>
+                        <div class="anitos-classes-entry class-tikbalang">
+                            <video autoplay muted loop>
+                                <source src="video/tikbalang.webm">
+                            </video>
+                            <h4>Tikbalang</h4>
+                            <p>Tikbalangs are naturally strong, and their muscular builds make them hard to wound.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="section-items features">
-                <div class="feature-text">
-                    <h3>Gameplay</h3>
-                    <img src="images/screen_gameplay.jpg">
-                    <ul>
-                        <li>Anito Legends will automatically play a battle</li>
-                        <li>Anitos with highest ATK always opens the battle round</li>
-                        <li>Anitos have two bars -- green for life and blue for armor rating</li>
-                        <li>Anitos can equip weapons, armor and other items to increase their stats</li>
-                        <li>Mix and match Anitos to create a formidable team!</li>
-                    </ul>
+        </div>
+
+        <!-- charms start -->
+        <div class="section-unit" id="charms">
+            <div class="container">
+                <h1>Power up with Charms</h1>
+                <div class="charms-intro">
+                    <div class="charms-intro-image">
+                        <img src="images/charm_sample.png">
+                    </div>
+                    <div class="charms-intro-text">
+                        <p>Charms are special items that Anitos can equip to influence their statistics and the outcome of battles.</p>
+                        <p>Each Anito comes with 3 Charm slots. These slots are initially locked. The speed of unlocking a Charm slot depends on the Anito's rarity: the rarer the Anito is, the faster they can unlock.</p>
+                        <div class="charms-slider">
+                            <div class="charms-slider-container">
+                                <div class="charms-slider-slide">
+                                    <img src="images/charm_monk.png">
+                                    <h3>Monk</h3>
+                                    <p>Increase ATK, DEF, and HP by 5 when no weapon and shield are equipped.</p>
+                                </div>
+                                <div class="charms-slider-slide">
+                                    <img src="images/charm_antigrav.png">
+                                    <h3>Anti-Gravity</h3>
+                                    <p>Reduce equipment weight by 50%.</p>
+                                </div>
+                                <div class="charms-slider-slide">
+                                    <img src="images/charm_fasthands.png">
+                                    <h3>Fast Hands</h3>
+                                    <p>25% chance to gain an additional item drop (Tower Mode only).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="feature-text">
-                    <h3>Tower Mode (Single Player)</h3>
-                    <img src="images/screen_tower_mode.jpg">
-                    <ul>
-                        <li>The core single player PvE experience where your party of 3 anitos fight enemies and ascend The Tower</li>
-                        <li>Face the boss at the very top of The Tower to earn rewards</li>
-                        <li>Beating Tower Boss rewards the player with $GINTO tokens</li>
-                    </ul>
+            </div>
+        </div>
+
+        <!-- supplemental facts start -->
+        <div class="section-unit">
+            <div class="container">
+                <div class="section-items about">
+                    <div class="section-text">
+                        <h3>Battle your way to victory!</h3>
+                        <p>Anito Legends is a multi-platform strategic auto-battler wherein you are tasked to assemble a team of Anitos, customize their equipment and go on an adventure or battle with other players.</p>
+                        <h3>Play and earn</h3>
+                        <p>In Anito Legends, you can play to earn tokens. Anito tokens can be used to purchase items from the Anito Legends Marketplace.</p>
+                    </div>
+                    <div class="section-image">
+                        <img class="about-img" src="images/card-pose-1.png">
+                    </div>
                 </div>
-                <div class="feature-text">
-                    <h3>Arena Mode (Multiplayer)</h3>
-                    <img src="images/screen_arena_mode.jpg">
-                    <ul>
-                        <li>The core competitive PVP experience of Anito Legends</li>
-                        <li>Matches are decided based on player skill level</li>
-                        <li>Earn $GINTO tokens by winning matches</li>
-                    </ul>
-                </div>
-                <div class="feature-text">
-                    <h3>Anito Care</h3>
-                    <img src="images/screen_anito_care.jpg">
-                    <ul>
-                        <li>Heal or revive fallen Anitos and feed them with their favorite food for bonuses</li>
-                        <li>Send Anitos off to quests to earn more in-game rewards</li>
-                        <li>Earn hearts to boost your Anito’s stats</li>
-                        <li>Level up Anito friendship to boost in-game rewards</li>
-                    </ul>
+                <div class="section-items features">
+                    <div class="feature-text">
+                        <h3>Gameplay</h3>
+                        <img src="images/screen_gameplay.jpg">
+                        <ul>
+                            <li>Anito Legends will automatically play a battle</li>
+                            <li>Anitos with highest ATK always opens the battle round</li>
+                            <li>Anitos have two bars -- green for life and blue for armor rating</li>
+                            <li>Anitos can equip weapons, armor and other items to increase their stats</li>
+                            <li>Mix and match Anitos to create a formidable team!</li>
+                        </ul>
+                    </div>
+                    <div class="feature-text">
+                        <h3>Tower Mode (Single Player)</h3>
+                        <img src="images/screen_tower_mode.jpg">
+                        <ul>
+                            <li>The core single player PvE experience where your party of 3 anitos fight enemies and ascend The Tower</li>
+                            <li>Face the boss at the very top of The Tower to earn rewards</li>
+                            <li>Beating Tower Boss rewards the player with $GINTO tokens</li>
+                        </ul>
+                    </div>
+                    <div class="feature-text">
+                        <h3>Arena Mode (Multiplayer)</h3>
+                        <img src="images/screen_arena_mode.jpg">
+                        <ul>
+                            <li>The core competitive PVP experience of Anito Legends</li>
+                            <li>Matches are decided based on player skill level</li>
+                            <li>Earn $GINTO tokens by winning matches</li>
+                        </ul>
+                    </div>
+                    <div class="feature-text">
+                        <h3>Anito Care</h3>
+                        <img src="images/screen_anito_care.jpg">
+                        <ul>
+                            <li>Heal or revive fallen Anitos and feed them with their favorite food for bonuses</li>
+                            <li>Send Anitos off to quests to earn more in-game rewards</li>
+                            <li>Earn hearts to boost your Anito’s stats</li>
+                            <li>Level up Anito friendship to boost in-game rewards</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -207,75 +382,77 @@
 
         <!-- roadmap start -->
         <div class="section-unit" id="roadmap">
-            <h1>Roadmap</h1>
-            <div class="section-cards roadmap-cards">
-                <div class="roadmap roadmap-1">
-                    <img src="images/roadmap-pose-1.png">
-                    <div class="card-background"></div>
-                    <div class="card-content">
-                        <h2>December 2021</h2>
-                        <ul>
-                            <li>Early Access sign-up</li>
-                        </ul>
+            <div class="container">
+                <h1>Roadmap</h1>
+                <div class="section-cards roadmap-cards">
+                    <div class="roadmap roadmap-1">
+                        <img src="images/roadmap-pose-1.png">
+                        <div class="card-background"></div>
+                        <div class="card-content">
+                            <h2>December 2021</h2>
+                            <ul>
+                                <li>Early Access sign-up</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="roadmap roadmap-2">
-                    <img src="images/roadmap-pose-1.png">
-                    <div class="card-background"></div>
-                    <div class="card-content">
-                        <h2>Q1 2022</h2>
-                        <ul>
-                            <li>Early Access (Web)</li>
-                            <li>Early Access (Mobile)</li>
-                        </ul>
+                    <div class="roadmap roadmap-2">
+                        <img src="images/roadmap-pose-1.png">
+                        <div class="card-background"></div>
+                        <div class="card-content">
+                            <h2>Q1 2022</h2>
+                            <ul>
+                                <li>Early Access (Web)</li>
+                                <li>Early Access (Mobile)</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="roadmap roadmap-3">
-                    <img src="images/roadmap-pose-2.png">
-                    <div class="card-background"></div>
-                    <div class="card-content">
-                        <h2>Q2 2022</h2>
-                        <ul>
-                            <li>Web and Mobile versions</li>
-                            <li>Anito Care</li>
-                            <li>PvE</li>
-                        </ul>
+                    <div class="roadmap roadmap-3">
+                        <img src="images/roadmap-pose-2.png">
+                        <div class="card-background"></div>
+                        <div class="card-content">
+                            <h2>Q2 2022</h2>
+                            <ul>
+                                <li>Web and Mobile versions</li>
+                                <li>Anito Care</li>
+                                <li>PvE</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="roadmap roadmap-4">
-                    <img src="images/roadmap-pose-2.png">
-                    <div class="card-background"></div>
-                    <div class="card-content">
-                        <h2>Q3 2022</h2>
-                        <ul>
-                            <li><span>July</span> PVP and beta tournament</li>
-                            <li><span>August</span> NFT Sale</li>
-                            <li>TGE</li>
-                            <li>Early Access Launch</li>
-                        </ul>
+                    <div class="roadmap roadmap-4">
+                        <img src="images/roadmap-pose-2.png">
+                        <div class="card-background"></div>
+                        <div class="card-content">
+                            <h2>Q3 2022</h2>
+                            <ul>
+                                <li><span>July</span> PVP and beta tournament</li>
+                                <li><span>August</span> NFT Sale</li>
+                                <li>TGE</li>
+                                <li>Early Access Launch</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="roadmap roadmap-5">
-                    <img src="images/roadmap-pose-3.png">
-                    <div class="card-background"></div>
-                    <div class="card-content">
-                        <h2>Q4 2022</h2>
-                        <ul>
-                            <li>New Classes</li>
-                            <li>Additional PvP/PvE content</li>
-                            <li>NFT Weapons</li>
-                            <li>Betting System</li>
-                        </ul>
+                    <div class="roadmap roadmap-5">
+                        <img src="images/roadmap-pose-3.png">
+                        <div class="card-background"></div>
+                        <div class="card-content">
+                            <h2>Q4 2022</h2>
+                            <ul>
+                                <li>New Classes</li>
+                                <li>Additional PvP/PvE content</li>
+                                <li>NFT Weapons</li>
+                                <li>Betting System</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="roadmap roadmap-6">
-                    <img src="images/roadmap-pose-3.png">
-                    <div class="card-background"></div>
-                    <div class="card-content">
-                        <h2>Q1 2023</h2>
-                        <ul>
-                            <li>Automated Scholarship System</li>
-                        </ul>
+                    <div class="roadmap roadmap-6">
+                        <img src="images/roadmap-pose-3.png">
+                        <div class="card-background"></div>
+                        <div class="card-content">
+                            <h2>Q1 2023</h2>
+                            <ul>
+                                <li>Automated Scholarship System</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -284,169 +461,193 @@
 
         <!-- game flow start -->
         <div class="section-unit" id="gameflow">
-            <h1>Game Flow</h1>
-            <div class="section-gameflow">
-                <img src="images/al_gameflow.png">
+            <div class="container">
+                <h1>Game Flow</h1>
+                <div class="section-gameflow">
+                    <img src="images/al_gameflow.png">
+                </div>
             </div>
         </div>
         <!-- game flow end -->
 
         <!-- tokenomics start -->
         <div class="section-unit" id="tokenomics">
-            <h1>Tokenomics</h1>
-            <div class="section-gameflow">
-                <img src="images/tokenomics_chart.png">
+            <div class="container">
+                <h1>Tokenomics</h1>
+                <div class="section-gameflow">
+                    <img src="images/tokenomics_chart.png">
+                </div>
             </div>
         </div>
         <!-- tokenomics end -->
 
         <!-- team start -->
-        <div class="section-unit" id="team">
-            <h1>The Team</h1>
-            <h2>Game Development</h2>
-            <div class="section-items team-development">
-                <div class="team-member">
-                    <div class="team-member-info" onclick="ShowPopup('team-james')">
-                        <i class="team-member-plus lni lni-circle-plus"></i>
-                        <img src="images/team/james_c.jpg">
-                        <h3>James <br>Chua</h3>
+        <div class="section-unit off-white" id="team">
+            <div class="container">
+                <h1>The Team</h1>
+                <h2>Game Development</h2>
+                <div class="section-items team-development">
+                    <div class="team-member">
+                        <div class="team-member-info" onclick="ShowPopup('team-james')">
+                            <i class="team-member-plus lni lni-circle-plus"></i>
+                            <img src="images/team/james_c.jpg">
+                            <h3>James <br>Chua</h3>
+                        </div>
+                        <div class="team-member-position">
+                            <h5>Chief Executive Officer</h5>
+                        </div>
                     </div>
-                    <div class="team-member-position">
-                        <h5>Chief Executive Officer</h5>
+                    <div class="team-member">
+                        <div class="team-member-info" onclick="ShowPopup('team-erick')">
+                            <i class="team-member-plus lni lni-circle-plus"></i>
+                            <img src="images/team/erick.jpg">
+                            <h3>Erick <br>Garayblas</h3>
+                        </div>
+                        <div class="team-member-position">
+                            <h5>Chief Operating Officer</h5>
+                        </div>
                     </div>
-                </div>
-                <div class="team-member">
-                    <div class="team-member-info" onclick="ShowPopup('team-erick')">
-                        <i class="team-member-plus lni lni-circle-plus"></i>
-                        <img src="images/team/erick.jpg">
-                        <h3>Erick <br>Garayblas</h3>
+                    <div class="team-member">
+                        <div class="team-member-info" onclick="ShowPopup('team-jayvee')">
+                            <i class="team-member-plus lni lni-circle-plus"></i>
+                            <img src="images/team/jayvee.jpg">
+                            <h3>Jayvee <br>Fernandez</h3>
+                        </div>
+                        <div class="team-member-position">
+                            <h5>Chief Marketing Officer</h5>
+                        </div>
                     </div>
-                    <div class="team-member-position">
-                        <h5>Chief Operating Officer</h5>
+                    <div class="team-member">
+                        <div class="team-member-info" onclick="ShowPopup('team-jed')">
+                            <i class="team-member-plus lni lni-circle-plus"></i>
+                            <img src="images/team/jed.jpg">
+                            <h3>Jed <br>Cruz</h3>
+                        </div>
+                        <div class="team-member-position">
+                            <h5>Chief Creative Officer</h5>
+                        </div>
                     </div>
-                </div>
-                <div class="team-member">
-                    <div class="team-member-info" onclick="ShowPopup('team-jayvee')">
-                        <i class="team-member-plus lni lni-circle-plus"></i>
-                        <img src="images/team/jayvee.jpg">
-                        <h3>Jayvee <br>Fernandez</h3>
+                    <div class="team-member">
+                        <div class="team-member-info">
+                            <img src="images/team/james_h.jpg">
+                            <h3>James <br>Honda Jr.</h3>
+                        </div>
+                        <div class="team-member-position">
+                            <h5>Lead Artist</h5>
+                        </div>
                     </div>
-                    <div class="team-member-position">
-                        <h5>Chief Marketing Officer</h5>
+                    <div class="team-member">
+                        <div class="team-member-info" onclick="ShowPopup('team-justin')">
+                            <i class="team-member-plus lni lni-circle-plus"></i>
+                            <img src="images/team/justin.jpg">
+                            <h3>Justin <br>Cordova</h3>
+                        </div>
+                        <div class="team-member-position">
+                            <h5>Lead Developer</h5>
+                        </div>
                     </div>
-                </div>
-                <div class="team-member">
-                    <div class="team-member-info" onclick="ShowPopup('team-jed')">
-                        <i class="team-member-plus lni lni-circle-plus"></i>
-                        <img src="images/team/jed.jpg">
-                        <h3>Jed <br>Cruz</h3>
+                    <div class="team-member">
+                        <div class="team-member-info" onclick="ShowPopup('team-mae')">
+                            <i class="team-member-plus lni lni-circle-plus"></i>
+                            <img src="images/team/mae.jpg">
+                            <h3>Mae <br>Ca&Ntilde;a</h3>
+                        </div>
+                        <div class="team-member-position">
+                            <h5>Web and Blockchain Developer</h5>
+                        </div>
                     </div>
-                    <div class="team-member-position">
-                        <h5>Chief Creative Officer</h5>
+                    <div class="team-member">
+                        <div class="team-member-info" onclick="ShowPopup('team-sam')">
+                            <i class="team-member-plus lni lni-circle-plus"></i>
+                            <img src="images/team/sam.jpg">
+                            <h3>Sam <br>Khalil</h3>
+                        </div>
+                        <div class="team-member-position">
+                            <h5>Game Developer</h5>
+                        </div>
                     </div>
-                </div>
-                <div class="team-member">
-                    <div class="team-member-info">
-                        <img src="images/team/james_h.jpg">
-                        <h3>James <br>Honda Jr.</h3>
+                    <div class="team-member">
+                        <div class="team-member-info" onclick="ShowPopup('team-luie')">
+                            <i class="team-member-plus lni lni-circle-plus"></i>
+                            <img src="images/team/luie.jpg">
+                            <h3>Luie <br>Magbanua</h3>
+                        </div>
+                        <div class="team-member-position">
+                            <h5>Community and PR Head</h5>
+                        </div>
                     </div>
-                    <div class="team-member-position">
-                        <h5>Lead Artist</h5>
+                    <div class="team-member">
+                        <div class="team-member-info">
+                            <img src="images/team/eli.jpg">
+                            <h3>Eliezer <br>Rabadon</h3>
+                        </div>
+                        <div class="team-member-position">
+                            <h5>Blockchain Advisor and Developer</h5>
+                        </div>
                     </div>
-                </div>
-                <div class="team-member">
-                    <div class="team-member-info" onclick="ShowPopup('team-justin')">
-                        <i class="team-member-plus lni lni-circle-plus"></i>
-                        <img src="images/team/justin.jpg">
-                        <h3>Justin <br>Cordova</h3>
+                    <div class="team-member">
+                        <div class="team-member-info">
+                            <img src="images/team/christian.jpg">
+                            <h3>Christian Niel <br>Angel</h3>
+                        </div>
+                        <div class="team-member-position">
+                            <h5>Cyber Security Advisor</h5>
+                        </div>
                     </div>
-                    <div class="team-member-position">
-                        <h5>Lead Developer</h5>
+                    <div class="team-member">
+                        <div class="team-member-info">
+                            <img src="images/team/rick.jpg">
+                            <h3>Rick <br>Lo</h3>
+                        </div>
+                        <div class="team-member-position">
+                            <h5>Community & Social Media Asset Artist</h5>
+                        </div>
                     </div>
-                </div>
-                <div class="team-member">
-                    <div class="team-member-info" onclick="ShowPopup('team-mae')">
-                        <i class="team-member-plus lni lni-circle-plus"></i>
-                        <img src="images/team/mae.jpg">
-                        <h3>Mae <br>Ca&Ntilde;a</h3>
-                    </div>
-                    <div class="team-member-position">
-                        <h5>Web and Blockchain Developer</h5>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="team-member-info" onclick="ShowPopup('team-sam')">
-                        <i class="team-member-plus lni lni-circle-plus"></i>
-                        <img src="images/team/sam.jpg">
-                        <h3>Sam <br>Khalil</h3>
-                    </div>
-                    <div class="team-member-position">
-                        <h5>Game Developer</h5>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="team-member-info" onclick="ShowPopup('team-luie')">
-                        <i class="team-member-plus lni lni-circle-plus"></i>
-                        <img src="images/team/luie.jpg">
-                        <h3>Luie <br>Magbanua</h3>
-                    </div>
-                    <div class="team-member-position">
-                        <h5>Community and PR Head</h5>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="team-member-info">
-                        <img src="images/team/eli.jpg">
-                        <h3>Eliezer <br>Rabadon</h3>
-                    </div>
-                    <div class="team-member-position">
-                        <h5>Blockchain Advisor and Developer</h5>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="team-member-info">
-                        <img src="images/team/christian.jpg">
-                        <h3>Christian Niel <br>Angel</h3>
-                    </div>
-                    <div class="team-member-position">
-                        <h5>Cyber Security Advisor</h5>
-                    </div>
-                </div>
-            </div>
-            <h2>Advisors</h2>
-            <div class="section-items team-advisors">
-                <div class="partner-grid-cell">
-                    <img src="images/partners/partner-sparkpoint.png">
-                </div>
-                <div class="partner-grid-cell">
-                    <img src="images/partners/partner-spherium.png">
-                </div>
-                <div class="partner-grid-cell">
-                    <img src="images/partners/partner-secuna.png">
-                </div>
-                <div class="team-member">
-                    <div class="team-member-info" onclick="ShowPopup('team-paul')">
-                        <i class="team-member-plus lni lni-circle-plus"></i>
-                        <img src="images/team/paul.jpg">
-                        <h3>Paul <br>Gadi</h3>
-                    </div>
-                    <div class="team-member-position">
-                        <h5>
-                            CTO, OP Games<br>
-                            Co-founder, Arcadians.io
-                        </h5>
+                    <div class="team-member">
+                        <div class="team-member-info">
+                            <img src="images/team/nate.jpg">
+                            <h3>Nate <br>Pi&Ntilde;ano</h3>
+                        </div>
+                        <div class="team-member-position">
+                            <h5>Community & Social Media Manager</h5>
+                        </div>
                     </div>
                 </div>
-                <div class="team-member">
-                    <div class="team-member-info" onclick="ShowPopup('team-eric')">
-                        <i class="team-member-plus lni lni-circle-plus"></i>
-                        <img src="images/team/eric.jpg">
-                        <h3>Eric <br>Su</h3>
+                <h2>Advisors</h2>
+                <div class="section-items team-advisors">
+                    <div class="partner-grid-cell">
+                        <img src="images/partners/partner-sparkpoint.png">
                     </div>
-                    <div class="team-member-position">
-                        <h5>
-                            Founder, Exnetwork Capital
-                        </h5>
+                    <div class="partner-grid-cell">
+                        <img src="images/partners/partner-spherium.png">
+                    </div>
+                    <div class="partner-grid-cell">
+                        <img src="images/partners/partner-secuna.png">
+                    </div>
+                    <div class="team-member">
+                        <div class="team-member-info" onclick="ShowPopup('team-paul')">
+                            <i class="team-member-plus lni lni-circle-plus"></i>
+                            <img src="images/team/paul.jpg">
+                            <h3>Paul <br>Gadi</h3>
+                        </div>
+                        <div class="team-member-position">
+                            <h5>
+                                CTO, OP Games<br>
+                                Co-founder, Arcadians.io
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-member-info" onclick="ShowPopup('team-eric')">
+                            <i class="team-member-plus lni lni-circle-plus"></i>
+                            <img src="images/team/eric.jpg">
+                            <h3>Eric <br>Su</h3>
+                        </div>
+                        <div class="team-member-position">
+                            <h5>
+                                Founder, Exnetwork Capital
+                            </h5>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -454,59 +655,61 @@
         <!-- team end -->
 
         <!-- partners start -->
-        <div class="section-unit" id="partners">
-            <h1>Partners</h1>
-            <div class="partner-grid">
-                <div class="partner-grid-cell">
-                    <a href="https://sparkpoint.io/" target="_blank"><img src="images/partners/partner-sparkpoint.png"></a>
-                </div>
-                <div class="partner-grid-cell">
-                    <a href="https://exnetworkcapital.com/" target="_blank"><img src="images/partners/partner-exntc.png"></a>
-                </div>
-                <div class="partner-grid-cell">
-                    <a href="https://www.alphacoinfund.com/" target="_blank"><img src="images/partners/partner-alphacoin.png"></a>
-                </div>
-                <div class="partner-grid-cell">
-                    <a href="https://autoventure.group/" target="_blank"><img src="images/partners/partner-avg.png"></a>
-                </div>
-                <div class="partner-grid-cell">
-                    <a href="https://avstarcapital.co/" target="_blank"><img src="images/partners/partner-avstar.png"></a>
-                </div>
-                <div class="partner-grid-cell">
-                    <a href="https://twitter.com/nf_venture/" target="_blank"><img src="images/partners/partner-nfv.png"></a>
-                </div>
-                <div class="partner-grid-cell">
-                    <a href="https://kingpad.co/" target="_blank"><img src="images/partners/partner-kingpad.png"></a>
-                </div>
-                <div class="partner-grid-cell">
-                    <a href="https://cspdao.network/" target="_blank"><img src="images/partners/partner-cspdao.png"></a>
-                </div>
-                <div class="partner-grid-cell">
-                    <a href="https://dreamboatcapital.com/" target="_blank"><img src="images/partners/partner-dreamboat.png"></a>
-                </div>
-                <div class="partner-grid-cell">
-                    <a href="https://www.moneybees.ph/" target="_blank"><img src="images/partners/partner-moneybees.png"></a>
-                </div>
-                <div class="partner-grid-cell">
-                    <a href="https://spherium.finance/" target="_blank"><img src="images/partners/partner-spherium.png"></a>
-                </div>
-                <div class="partner-grid-cell">
-                    <a href="https://daoverse.capital/" target="_blank"><img src="images/partners/partner-daoverse.png"></a>
-                </div>
-                <div class="partner-grid-cell">
-                    <a href="https://daoverse.capital/" target="_blank"><img src="images/partners/partner-nour.png"></a>
-                </div>
-                <div class="partner-grid-cell">
-                    <a href="https://8.ventures/" target="_blank"><img src="images/partners/partner-8ventures.png"></a>
-                </div>
-                <div class="partner-grid-cell">
-                    <a href="https://adroa.vc/" target="_blank"><img src="images/partners/partner-adroa.png"></a>
-                </div>
-                <div class="partner-grid-cell">
-                    <a href="https://twitter.com/goodgamesoc" target="_blank"><img src="images/partners/partner-ggs.png"></a>
-                </div>
-                <div class="partner-grid-cell">
-                    <a href="https://www.pinksale.finance/" target="_blank"><img src="images/partners/partner-pinkpad.png"></a>
+        <div class="section-unit white" id="partners">
+            <div class="container">
+                <h1>Partners</h1>
+                <div class="partner-grid">
+                    <div class="partner-grid-cell">
+                        <a href="https://sparkpoint.io/" target="_blank"><img src="images/partners/partner-sparkpoint.png"></a>
+                    </div>
+                    <div class="partner-grid-cell">
+                        <a href="https://exnetworkcapital.com/" target="_blank"><img src="images/partners/partner-exntc.png"></a>
+                    </div>
+                    <div class="partner-grid-cell">
+                        <a href="https://www.alphacoinfund.com/" target="_blank"><img src="images/partners/partner-alphacoin.png"></a>
+                    </div>
+                    <div class="partner-grid-cell">
+                        <a href="https://autoventure.group/" target="_blank"><img src="images/partners/partner-avg.png"></a>
+                    </div>
+                    <div class="partner-grid-cell">
+                        <a href="https://avstarcapital.co/" target="_blank"><img src="images/partners/partner-avstar.png"></a>
+                    </div>
+                    <div class="partner-grid-cell">
+                        <a href="https://twitter.com/nf_venture/" target="_blank"><img src="images/partners/partner-nfv.png"></a>
+                    </div>
+                    <div class="partner-grid-cell">
+                        <a href="https://kingpad.co/" target="_blank"><img src="images/partners/partner-kingpad.png"></a>
+                    </div>
+                    <div class="partner-grid-cell">
+                        <a href="https://cspdao.network/" target="_blank"><img src="images/partners/partner-cspdao.png"></a>
+                    </div>
+                    <div class="partner-grid-cell">
+                        <a href="https://dreamboatcapital.com/" target="_blank"><img src="images/partners/partner-dreamboat.png"></a>
+                    </div>
+                    <div class="partner-grid-cell">
+                        <a href="https://www.moneybees.ph/" target="_blank"><img src="images/partners/partner-moneybees.png"></a>
+                    </div>
+                    <div class="partner-grid-cell">
+                        <a href="https://spherium.finance/" target="_blank"><img src="images/partners/partner-spherium.png"></a>
+                    </div>
+                    <div class="partner-grid-cell">
+                        <a href="https://daoverse.capital/" target="_blank"><img src="images/partners/partner-daoverse.png"></a>
+                    </div>
+                    <div class="partner-grid-cell">
+                        <a href="https://daoverse.capital/" target="_blank"><img src="images/partners/partner-nour.png"></a>
+                    </div>
+                    <div class="partner-grid-cell">
+                        <a href="https://8.ventures/" target="_blank"><img src="images/partners/partner-8ventures.png"></a>
+                    </div>
+                    <div class="partner-grid-cell">
+                        <a href="https://adroa.vc/" target="_blank"><img src="images/partners/partner-adroa.png"></a>
+                    </div>
+                    <div class="partner-grid-cell">
+                        <a href="https://twitter.com/goodgamesoc" target="_blank"><img src="images/partners/partner-ggs.png"></a>
+                    </div>
+                    <div class="partner-grid-cell">
+                        <a href="https://www.pinksale.finance/" target="_blank"><img src="images/partners/partner-pinkpad.png"></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -530,50 +733,52 @@
         guild partners end -->
 
         <!-- as seen on start -->
-        <div class="section-unit" id="partners">
-            <h1>As Seen On</h1>
-            <div class="partner-grid">
-                <div class="partner-grid-cell">
-                    <a href="https://bitpinas.com/play-to-earn/filipino-anito-legends-nft-beta/" target="_blank"><img src="images/media/media_bitpinas.png"></a>
-                </div>
-                <div class="partner-grid-cell">
-                    <a href="https://www.gadgetpilipinas.net/2022/02/anito-legends-closed-beta-testing-open-for-sign-ups/" target="_blank"><img src="images/media/media_gadgetpilipinas.png"></a>
-                </div>
-                <div class="partner-grid-cell">
-                    <a href="https://mb.com.ph/2022/02/11/theres-a-new-play-to-earn-game-and-it-champions-filipino-culture-and-creativity/" target="_blank"><img src="images/media/media_mb.png"></a>
-                </div>
-                <div class="partner-grid-cell">
-                    <a href="https://fitzvillafuerte.com/anito-legends-new-play-to-earn-nft-game-from-the-philippines.html" target="_blank">
-                        <img src="images/media/media_readytoberich.jpg"><br>
-                        <span>fitzvillafuerte.com</span>
-                    </a>
-                </div>
-                <div class="partner-grid-cell">
-                    <a href="https://www.facebook.com/rjledesmapodcast/videos/330072405744138" target="_blank"><img src="images/media/media_rjledesma.png"></a>
-                </div>
-                <div class="partner-grid-cell">
-                    <a href="https://www.spin.ph/esports/about-pinoy-play-to-earn-game-anito-legends-a1017-20220228-lfrm" target="_blank"><img src="images/media/media_spinph.png"></a>
-                </div>
-                <div class="partner-grid-cell">
-                    <a href="https://www.gizguide.com/2022/05/anito-legends-launches.html" target="_blank"><img src="images/media/media_gizguide.png"></a>
-                </div>
-                <div class="partner-grid-cell">
-                    <a href="https://onemoregame.ph/anito-legends-now-playable-4-platforms/" target="_blank"><img src="images/media/media_onemoregame.png"></a>
-                </div>
-                <div class="partner-grid-cell">
-                    <a href="https://unbox.ph/editorials/anito-legends-closed-beta-now-available-in-four-platforms/" target="_blank"><img src="images/media/media_unbox.png"></a>
-                </div>
-                <div class="partner-grid-cell">
-                    <a href="https://gaming.yugatech.com/news/anito-legends-to-be-available-on-pc-mac-android-ios/" target="_blank"><img src="images/media/media_yuga.png"></a>
-                </div>
-                <div class="partner-grid-cell">
-                    <a href="https://www.noypigeeks.com/gaming/download-anito-legends-nft-game/" target="_blank"><img src="images/media/media_noypi.png"></a>
-                </div>
-                <div class="partner-grid-cell">
-                    <a href="https://newsbytes.ph/2022/05/13/anito-legends-seeks-to-grow-tester-community-ahead-of-june-launch/" target="_blank"><img src="images/media/media_newsbytes.png"></a>
-                </div>
-                <div class="partner-grid-cell">
-                    <a href="https://backendnews.net/play-and-earn-game-anito-legends-now-available-on-four-platforms/" target="_blank"><img src="images/media/media_backend.png"></a>
+        <div class="section-unit off-white" id="partners">
+            <div class="container">
+                <h1>As Seen On</h1>
+                <div class="partner-grid">
+                    <div class="partner-grid-cell">
+                        <a href="https://bitpinas.com/play-to-earn/filipino-anito-legends-nft-beta/" target="_blank"><img src="images/media/media_bitpinas.png"></a>
+                    </div>
+                    <div class="partner-grid-cell">
+                        <a href="https://www.gadgetpilipinas.net/2022/02/anito-legends-closed-beta-testing-open-for-sign-ups/" target="_blank"><img src="images/media/media_gadgetpilipinas.png"></a>
+                    </div>
+                    <div class="partner-grid-cell">
+                        <a href="https://mb.com.ph/2022/02/11/theres-a-new-play-to-earn-game-and-it-champions-filipino-culture-and-creativity/" target="_blank"><img src="images/media/media_mb.png"></a>
+                    </div>
+                    <div class="partner-grid-cell">
+                        <a href="https://fitzvillafuerte.com/anito-legends-new-play-to-earn-nft-game-from-the-philippines.html" target="_blank">
+                            <img src="images/media/media_readytoberich.jpg"><br>
+                            <span>fitzvillafuerte.com</span>
+                        </a>
+                    </div>
+                    <div class="partner-grid-cell">
+                        <a href="https://www.facebook.com/rjledesmapodcast/videos/330072405744138" target="_blank"><img src="images/media/media_rjledesma.png"></a>
+                    </div>
+                    <div class="partner-grid-cell">
+                        <a href="https://www.spin.ph/esports/about-pinoy-play-to-earn-game-anito-legends-a1017-20220228-lfrm" target="_blank"><img src="images/media/media_spinph.png"></a>
+                    </div>
+                    <div class="partner-grid-cell">
+                        <a href="https://www.gizguide.com/2022/05/anito-legends-launches.html" target="_blank"><img src="images/media/media_gizguide.png"></a>
+                    </div>
+                    <div class="partner-grid-cell">
+                        <a href="https://onemoregame.ph/anito-legends-now-playable-4-platforms/" target="_blank"><img src="images/media/media_onemoregame.png"></a>
+                    </div>
+                    <div class="partner-grid-cell">
+                        <a href="https://unbox.ph/editorials/anito-legends-closed-beta-now-available-in-four-platforms/" target="_blank"><img src="images/media/media_unbox.png"></a>
+                    </div>
+                    <div class="partner-grid-cell">
+                        <a href="https://gaming.yugatech.com/news/anito-legends-to-be-available-on-pc-mac-android-ios/" target="_blank"><img src="images/media/media_yuga.png"></a>
+                    </div>
+                    <div class="partner-grid-cell">
+                        <a href="https://www.noypigeeks.com/gaming/download-anito-legends-nft-game/" target="_blank"><img src="images/media/media_noypi.png"></a>
+                    </div>
+                    <div class="partner-grid-cell">
+                        <a href="https://newsbytes.ph/2022/05/13/anito-legends-seeks-to-grow-tester-community-ahead-of-june-launch/" target="_blank"><img src="images/media/media_newsbytes.png"></a>
+                    </div>
+                    <div class="partner-grid-cell">
+                        <a href="https://backendnews.net/play-and-earn-game-anito-legends-now-available-on-four-platforms/" target="_blank"><img src="images/media/media_backend.png"></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -898,7 +1103,17 @@
     </div>
     <!-- overlays end -->
 
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
     <script>
+        $(document).ready(function() {
+            $(".charms-slider-container").slick({
+                dots: true
+            });
+        });
+
         function OpenMenu() {
             document.querySelector("#nav-menu").classList.add("active");
         }

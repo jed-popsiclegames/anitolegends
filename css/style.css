@@ -36,7 +36,7 @@
     --berry: #eb4355;
     --medium-violet: #4f2c94;
     --dark-violet: #160b2d;
-    --darkest-violet: #090c21;
+    --darkest-violet: #060318;
     --neutral-gray: #444;
     --lighter-gray: #888;
 }
@@ -54,9 +54,9 @@ html {
 
 body {
     font-family: "Ubuntu", sans-serif;
-    color: var(--neutral-gray);
-    background-color: var(--berry);
-    background-image: url("../images/bg_tile.png");
+    color: white;
+    background-color: var(--dark-violet);
+    /* background-image: url("../images/bg_tile.png"); */
     animation: bg-scroll 5s linear infinite;
     overflow-x: hidden;
 }
@@ -73,7 +73,8 @@ body {
 h1 {
     font-family: "Arco", sans-serif;
     font-size: 3rem;
-    color: var(--berry);
+    color: white;
+    margin-bottom: 1rem;
 }
 
 h2 {
@@ -172,6 +173,12 @@ blockquote {
 
 .outer {
     padding: 3rem 0 6rem;
+    position: relative;
+}
+
+.outer.halftone {
+    background: url("../images/halftone.png");
+    background-size: 6px;
 }
 
 /**********/
@@ -191,7 +198,7 @@ blockquote {
 .header-logo {
     display: block;
     width: 100%;
-    top: 120px;
+    top: 80px;
     text-align: center;
     position: absolute;
     z-index: 2;
@@ -217,10 +224,10 @@ blockquote {
 
 .header-video {
     max-width: 1200px;
-    height: 500px;
+    height: 100%;
     overflow: hidden;
     margin: 0 auto 2rem;
-    padding-top: 150px;
+    /* padding-top: 150px; */
     position: relative;
     object-fit: cover;
     object-position: center;
@@ -229,10 +236,17 @@ blockquote {
     overflow: hidden;
 }
 
+.main-header {
+    height: 400px;
+    overflow: hidden;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
 .main-header video {
     z-index: 0;
     width: 100%;
-    height: 100%;
+    height: 120%;
     position: relative;
     object-fit: cover;
     object-position: center;
@@ -364,18 +378,27 @@ a:hover ~ .nav-dropdown-menu,
 /************/
 
 main {
-    background-color: white;
-    margin: 0 auto 80px;
-    max-width: 1200px;
-    min-height: 100vh;
+    background-color: var(--dark-violet);
+    margin: 0 auto;
+    /* max-width: 1200px; */
+    /* min-height: 100vh; */
     padding: 60px 0 0;
-    border-radius: 2rem;
+    /* border-radius: 2rem; */
     overflow: hidden;
 }
 
+main.transparent {
+    background: transparent;
+}
+
 .section-unit {
-    padding: 80px 2rem;
+    padding: 80px 0;
     text-align: center;
+}
+
+.section-unit .container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .section-unit:first-of-type {
@@ -383,22 +406,41 @@ main {
 }
 
 .section-unit:nth-of-type(2n) {
+    /* background-color: var(--darkest-violet); */
+    background: transparent;
+}
+
+.section-unit.white {
+    background-color: white;
+}
+
+.section-unit.off-white {
     background-color: var(--off-white);
+}
+
+.section-unit.white h1,
+.section-unit.off-white h1 {
+    color: var(--berry);
+}
+
+.section-subunit {
+    margin-bottom: 2rem;
 }
 
 .section-items {
     display: flex;
     justify-content: center;
-    padding: 0 1rem;
+    padding: 0;
 }
 
 .features {
     flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem 0;
 }
 
 .feature-text {
-    width: calc((100% - 1rem) / 2);
-    padding: 2rem;
+    width: calc((100% - 2rem) / 2);
 }
 
 .feature-text img {
@@ -748,17 +790,17 @@ main {
     transform: scaleX(-1);
 }
 .card-4 .card-background {
-    background-color: var(--dark-violet);
+    background-color: var(--orange);
 }
 .card-4 .card-content {
-    background-color: var(--dark-violet);
+    background-color: var(--orange);
 }
 .card-4 a {
-    border-color: var(--dark-violet);
+    background-color: var(--orange);
 }
 .card-4 a:hover {
     background-color: white;
-    color: var(--dark-violet);
+    background-color: var(--orange);
 }
 
 /* ROADMAP CARDS */
@@ -938,6 +980,226 @@ main {
 .roadmap-6 a:hover {
     background-color: white;
     color: var(--medium-violet);
+}
+
+/*********/
+/* GACHA */
+/*********/
+
+.gacha-list {
+    display: flex;
+    gap: 40px;
+}
+
+.gacha-banner-link {
+    display: block;
+}
+
+.gacha-banner {
+    margin: 0 auto;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    /* flex-basis: 30%; */
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--dark-violet);
+    box-shadow: 0 0 0 0;
+    transition: box-shadow 900ms;
+}
+
+.gacha-banner:hover {
+    box-shadow: 0 0 0 8px;
+    transition-duration: 300ms;
+}
+
+.gacha-banner#gacha-common {
+    color: #5ba14f;
+}
+.gacha-banner#gacha-epic {
+    color: #eb4355;
+}
+.gacha-banner#gacha-legendary {
+    color: #ffc300;
+}
+
+.gacha-banner > a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.gacha-banner > div,
+.gacha-banner > img,
+.gacha-banner > video {
+    pointer-events: none;
+    user-select: none;
+}
+
+.gacha-banner video {
+    width: 100%;
+    display: block;
+}
+
+.gacha-banner-title {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.gacha-banner-title h1,
+.gacha-banner-title h4 {
+    color: white;
+    margin: 0;
+}
+
+.gacha-heading {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+#gacha-common .gacha-banner-title {
+    background: #5ba14f;
+}
+#gacha-epic .gacha-banner-title {
+    background: #eb4355;
+}
+#gacha-legendary .gacha-banner-title {
+    background: linear-gradient(70deg, #ffc300 20%, #fff3cb 30%, #ffc300 60%, #fff3cb 80%)
+}
+#gacha-legendary .gacha-banner-title h1,
+#gacha-legendary .gacha-banner-title h4 {
+    color: #c80000;
+}
+
+.gacha-banner-box {
+    position: absolute;
+    width: 40%;
+    left: 12px;
+    top: 130px;
+}
+
+.gacha-banner-content {
+    background-color: var(--off-white);
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    line-height: 24px;
+    color: var(--neutral-gray);
+}
+
+.gacha-banner-link {
+    z-index: 1;
+    pointer-events: all;
+    position: relative;
+    display: inline;
+}
+
+.gacha-banner-content ul {
+    padding-left: 20px;
+}
+
+.gacha-banner-content li {
+    text-align: start;
+}
+
+.gacha-banner .button.gacha-purchase-button {
+    background-color: var(--off-white);
+    margin-right: 14px;
+    color: var(--berry);
+    border: 2px solid var(--berry);
+    border-radius: 50px;
+    transition-property: background-color, color;
+    transition-duration: 300ms;
+}
+
+.gacha-banner:hover .button.gacha-purchase-button {
+    background-color: var(--berry);
+    margin-right: 14px;
+    color: white;
+}
+
+/**********/
+/* ANITOS */
+/**********/
+
+.anitos-genesis {
+    display: flex;
+    gap: 2rem;
+}
+
+.anitos-genesis-content {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.anitos-genesis-image {
+    width: 40%;
+}
+
+.anitos-genesis-image img {
+    width: 100%;
+}
+
+.anitos-classes {
+    display: flex;
+    gap: 2rem;
+}
+
+.anitos-classes-entry {
+    width: 25%;
+}
+
+.anitos-classes-entry video {
+    width: 100%;
+}
+
+/**********/
+/* CHARMS */
+/**********/
+
+.charms-intro {
+    display: flex;
+    gap: 2rem;
+}
+
+.charms-intro-image {
+    width: 40%;
+}
+
+.charms-intro-text {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.charms-intro-image img {
+    width: 100%;
+}
+
+.charms-slider {
+    background-color: var(--off-white);
+    border-radius: 2rem;
+    padding: 1rem;
+    flex-grow: 1;
+    text-align: center;
+    color: var(--neutral-gray);
+    width: 60%;
+    margin: 0 auto;
+}
+
+.charms-slider-container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.charms-slider img {
+    height: 150px;
+    margin: 0 auto;
 }
 
 /*********/
@@ -1278,6 +1540,11 @@ footer {
 /* GAME FLOW */
 /*************/
 
+.section-gameflow {
+    background-color: var(--off-white);
+    border-radius: 32px;
+}
+
 .section-gameflow img,
 .section-tokenomics img {
     width: 100%;
@@ -1408,10 +1675,11 @@ footer {
 .overlay {
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.75);
+    color: var(--neutral-gray);
     z-index: 9000;
     display: flex;
     align-items: center;
@@ -1419,6 +1687,10 @@ footer {
     opacity: 0;
     pointer-events: none;
     transition: opacity 500ms;
+}
+
+.overlay h1 {
+    color: var(--berry);
 }
 
 .overlay.active {
@@ -1441,7 +1713,6 @@ footer {
 }
 
 .overlay-content-disclaimer {
-    min-width: 400px;
     max-width: 960px;
     padding: 2rem;
     background-color: var(--off-white);
@@ -1586,15 +1857,57 @@ footer {
     margin: 1rem;
 }
 
+.running-anitos {
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.running-anitos img {
+    filter: invert(1);
+    height: 60px;
+    position: relative;
+}
+
+.running-anitos img.running-kiwig {
+    margin-right: 1rem;
+}
+
+.running-anitos img.running-sarangay {
+    bottom: 2px;
+}
+
+.running-anitos img.running-siyokoy {
+    height: 80px;
+    top: 7px;
+}
+
 /*******************/
 /* GENERIC CONTENT */
 /*******************/
 
+.video-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.5) blur(4px)
+}
+
 .generic-content-area {
-    margin: 0 auto 4rem;
+    margin: 2rem auto 4rem;
+}
+
+.generic-content-area.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .generic-content-area.boxed {
+    background-color: rgba(0, 0, 0, 0.75);
     border: 1px solid var(--orange);
     border-radius: 2rem;
     padding: 2rem;
@@ -1607,6 +1920,11 @@ footer {
 
 i.large {
     font-size: 1.5rem;
+}
+
+.play-now p {
+    position: relative;
+    top: -4rem;
 }
 
 .btn-beta-play {
@@ -1643,6 +1961,36 @@ i.large {
     width: 100%;
 }
 
+.fill {
+    flex-grow: 1;
+}
+
+.v-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a.big-download {
+    background-color: var(--berry);
+    color: var(--white);
+    border: 2px solid var(--berry);
+    border-radius: 50px;
+    transition-property: background-color, color;
+    transition-duration: 300ms;
+    font-family: "Arco", sans-serif;
+    font-size: 2rem;
+    padding: 2rem 4rem;
+    margin: 2rem auto;
+    display: inline-block;
+    text-decoration: none;
+}
+
+a.big-download:hover {
+    background-color: var(--off-white);
+    color: var(--berry);
+}
+
 /***************/
 /* BACK BUTTON */
 /***************/
@@ -1655,15 +2003,16 @@ i.large {
     font-family: "Arco", sans-serif;
     font-size: 2rem;
     text-decoration: none;
-    background-color: var(--medium-violet);
+    background-color: var(--berry);
+    color: white;
     padding: 1rem 2rem;
     border-radius: 2rem;
     transition: background-color 300ms, color 300ms;
 }
 
 .back-button a:hover {
-    background-color: var(--dark-violet);
-    color: var(--off-white);
+    background-color: var(--medium-violet);
+    color: white;
 }
 
 /**********/
@@ -1787,6 +2136,127 @@ footer {
     color: white;
 }
 
+/*********/
+/* SLICK */
+/*********/
+
+.slick-prev,
+.slick-next {
+    filter: invert(1);
+}
+
+/********/
+/* PLAY */
+/********/
+
+.play-logo {
+    width: 80%;
+    max-width: 500px;
+}
+
+.inline-button {
+    border-radius: 2rem;
+    background-color: var(--berry);
+    padding: 1rem 2rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 1rem;
+    transition-property: background-color, color;
+    transition-duration: 300ms;
+}
+
+.inline-button:hover {
+    background-color: var(--medium-violet);
+    color: white;
+}
+
+.device-download {
+    width: 45%;
+}
+
+.device-download img {
+    height: 32px;
+    vertical-align: middle;
+    filter: invert(1);
+}
+
+/*******/
+/* FAQ */
+/*******/
+
+#faq {
+    display: none;
+}
+
+.faq {
+    max-width: 600px;
+    margin: 1rem auto;
+}
+
+.faq-entry {
+    border-bottom: 1px solid var(--peach);
+    padding: 1.35rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-check {
+    display: none;
+}
+
+.faq-check:checked~.faq-question .faq-check-link {
+    padding-bottom: 0.25rem;
+}
+
+.faq-check:checked~.faq-answer {
+    height: auto;
+}
+
+.faq-check~.faq-question p::before {
+    content: "\ea68 \00a0 \00a0";
+}
+
+.faq-check:checked~.faq-question p::before {
+    color: var(--lighter-gray);
+    content: "\ea67 \00a0 \00a0";
+}
+
+.faq-question .faq-check-link {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.faq-question p::before {
+    vertical-align: bottom;
+    font-family: lineicons;
+    color: var(--berry);
+}
+
+.faq-question {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+
+.faq-question p, .faq-answer p {
+    margin: 0;
+}
+
+.faq-answer {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 0;
+}
+
+.faq-answer-content {
+    margin: 0 1rem 0 1.5rem;
+    color: var(--lighter-gray);
+}
+
 /*****************/
 /* MEDIA QUERIES */
 /*****************/
@@ -1805,7 +2275,6 @@ footer {
         margin-bottom: 4rem;
     }
 
-    main,
     .footer-container {
         margin-left: 2rem;
         margin-right: 2rem;
@@ -1817,6 +2286,10 @@ footer {
 
     .card:nth-child(2n) {
         margin-right: 0;
+    }
+
+    .gacha-banner h1 {
+        font-size: 36px;
     }
 
     .team-advisors {
@@ -1870,11 +2343,35 @@ footer {
         align-items: center;
     }
 
+    .gacha-list {
+        flex-direction: column;
+    }
+
+    .gacha-banner {
+        width: 100%;
+    }
+
+    .gacha-banner video {
+        width: 50%;
+    }
+
+    .gacha-heading {
+        flex-direction: row;
+    }
+
+    .gacha-banner-box {
+        width: 20%;
+    }
+
     .roadmap {
         width: 100%;
         max-width: 340px;
         margin-right: 0;
         margin-top: 100px;
+    }
+
+    .roadmap:not(:last-of-type)::before {
+        display: none;
     }
 
     .roadmap:not(:last-of-type)::after {
@@ -1917,6 +2414,7 @@ footer {
 
     .overlay-content,
     .overlay-content-disclaimer {
+        width: 100%;
         max-width: calc(100% - 2rem);
         margin-left: auto;
         margin-right: auto;
@@ -1925,11 +2423,6 @@ footer {
 
 @media screen and (max-width: 768px) {
     .header-video {
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-
-    main {
         margin-left: 1rem;
         margin-right: 1rem;
     }
@@ -1950,12 +2443,61 @@ footer {
         padding: 2rem 0;
     }
 
+    .anitos-genesis {
+        flex-direction: column;
+    }
+
+    .anitos-genesis-content {
+        order: 1;
+        width: 100%;
+    }
+
+    .anitos-genesis-image {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .anitos-classes {
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 2rem;
+        align-content: 0;
+    }
+
+    .anitos-classes-entry {
+        flex-basis: 40%;
+        flex-grow: 1;
+    }
+    
+    .charms-intro {
+        flex-direction: column;
+    }
+
+    .charms-intro-image {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .charms-intro-text {
+        gap: 1rem;
+    }
+
+    .charms-slider {
+        width: 100%;
+    }
+
+    .charms-intro-text {
+        width: 100%;
+    }
+
     .nav-menu-slide {
         width: 50%;
     }
 
     #team .section-items {
-        align-items: center;
+        align-items: stretch;
     }
 
     .team-member {
@@ -1981,6 +2523,11 @@ footer {
 
     .partner-grid-cell img {
         max-width: 300px;
+    }
+
+    .device-download {
+        width: 80%;
+        max-width: 420px;
     }
 
     .overlay-content {
@@ -2045,6 +2592,45 @@ footer {
 
     .nav-menu-slide {
         width: 75%;
+    }
+
+    .gacha-banner video {
+        width: 100%;
+    }
+
+    .gacha-heading {
+        flex-direction: column;
+    }
+
+    .gacha-banner-box {
+        width: 40%;
+    }
+
+    .anitos-classes {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .anitos-classes-entry {
+        width: 100%;
+    }
+
+    .running-anitos img {
+        height: 40px;
+    }
+    
+    .running-anitos img.running-kiwig {
+        margin-right: 1rem;
+    }
+    
+    .running-anitos img.running-sarangay {
+        bottom: 2px;
+    }
+    
+    .running-anitos img.running-siyokoy {
+        height: 56px;
+        top: 5px;
     }
 
     .footer-copyright {
