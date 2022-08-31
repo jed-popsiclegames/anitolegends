@@ -1,0 +1,5 @@
+---
+deployment:
+      tasks:
+        - export DEPLOYPATH=/home/jrevdavs/public_html/anitolegends/
+        - /bin/cp -R * $DEPLOYPATH
