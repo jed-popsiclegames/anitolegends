@@ -1678,6 +1678,7 @@ footer {
     will-change: contents;
     transition-property: transform;
     transition-duration: 300ms;
+    mix-blend-mode: darken;
 }
 
 .partner-grid-cell img:hover {
